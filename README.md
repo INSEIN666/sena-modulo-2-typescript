@@ -1,28 +1,17 @@
-# API HTTP de Videojuegos (TypeScript)
+# Módulo II - Fundamentos de TypeScript (SENA)
 
-API REST ligera construida nativamente con Node.js y TypeScript para la gestión de un catálogo en memoria de videojuegos.
+Sistema de Gestión de Productos y Pedidos desarrollado con **Node.js** y **TypeScript**.
 
-## 🚀 Requisitos e Instalación
+## 🚀 Características
+- Catálogo de productos fuertemente tipado.
+- Control seguro de stock.
+- Creación de clientes y pedidos con estados (`OrderStatus`).
+- Métodos de pago mediante `enums` (`PaymentMethod`).
+- Cálculo automático de totales de compra.
+- Respuestas genéricas reutilizables (`ServiceResponse<T>`).
 
-1. Clonar el repositorio.
-2. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-3. Iniciar el servidor en modo desarrollo:
-   ```bash
-   npm run dev
-   ```
-
-El servidor se iniciará en `http://localhost:3000`.
-
-## 📌 Rutas de la API
-
-| Método | Ruta | Descripción |
-| :--- | :--- | :--- |
-| **GET** | `/api/health` | Estado del servidor y conteo de registros |
-| **GET** | `/api/juegos` | Listar videojuegos (soporta filtros `?desarrollador=` y `?disponible=`) |
-| **GET** | `/api/juegos/:id` | Obtener videojuego por su ID |
-| **POST** | `/api/juegos` | Registrar un nuevo videojuego |
-| **PATCH** | `/api/juegos/:id` | Actualizar parcialmente un videojuego |
-| **DELETE** | `/api/juegos/:id` | Eliminar un videojuego |
+## 📜 Scripts
+- `npm run start`: Ejecuta el proyecto principal (`src/index.ts`).
+- `npm run typecheck`: Verifica tipos en TypeScript (`tsc --noEmit`).
+- `npm run build`: Compila el proyecto a JavaScript en `dist/`.
+- `npm run check`: Ejecuta verificación de tipos y compilación completa.
